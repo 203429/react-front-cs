@@ -11,3 +11,9 @@ body{
 .signup{
     width: 45%;
 }
+
+.bg-card{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}

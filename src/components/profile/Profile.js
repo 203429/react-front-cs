@@ -174,73 +174,71 @@ class Profile extends Component {
 
     render() {
         return (
-            <div class="container">
-                <div class="main-body1" id="bg">
-
-                    <nav aria-label="breadcrumb" class="main-breadcrumb green">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><p>Home</p></li>
-                            <li class="breadcrumb-item active">Profile</li>
+            <div className="container">
+                <div className="main-body1" id="bg">
+                    <nav aria-label="breadcrumb" className="main-breadcrumb green">
+                        <ol className="breadcrumb">
+                            <li className="breadcrumb-item"><p>Home</p></li>
+                            <li className="breadcrumb-item active">Profile</li>
                         </ol>
                     </nav>
-
-                    <div class="row gutters-sm">
-                        <div class="col-md-4 mb-3">
-                            <div class="card">
-                                <div class="card-body">
-                                    <div class="d-flex flex-column align-items-center text-center">
-                                        <img src="" id="loadimage" alt="Image not found" class="rounded-circle" width="150" />
-                                        <div class="mt-3">
+                    <div className="row gutters-sm">
+                        <div className="col-md-4 mb-3">
+                            <div className="card">
+                                <div className="card-body">
+                                    <div className="d-flex flex-column align-items-center text-center">
+                                        <img src="" id="loadimage" alt="Image not found" className="rounded-circle" width="150" />
+                                        <div className="mt-3">
                                             <h4>{this.state.username}</h4>
-                                            <p class="text-muted font-size-sm">{this.state.email}</p>
-                                            <button type="button" class="btn btn-danger" onClick={this.logout}>Log out</button>
+                                            <p className="text-muted font-size-sm">{this.state.email}</p>
+                                            <button type="button" className="btn btn-danger" onClick={this.logout}>Log out</button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-md-8">
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Username</h6>
+                        <div className="col-md-8">
+                            <div className="card mb-3">
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Username</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
+                                        <div className="col-sm-9 text-secondary">
                                             {this.state.username}
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">First Name</h6>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">First Name</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
+                                        <div className="col-sm-9 text-secondary">
                                             {this.state.first_name}
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Last Name</h6>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Last Name</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
+                                        <div className="col-sm-9 text-secondary">
                                             {this.state.last_name}
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Email</h6>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Email</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
+                                        <div className="col-sm-9 text-secondary">
                                             {this.state.email}
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-12">
-                                            <button type="button" class="btn btn-warning" onClick={this.editON}>Edit Profile</button>
+                                    <div className="row">
+                                        <div className="col-sm-12">
+                                            <button type="button" className="btn btn-warning" onClick={this.editON}>Edit Profile</button>
                                         </div>
                                     </div>
                                 </div>
@@ -248,66 +246,63 @@ class Profile extends Component {
                         </div>
                     </div>
                 </div>
-
-                <div class="main-body2" id="form">
+                <div className="main-body2" id="form">
                     <div >
                         <div >
                             <h4>Edit Profile</h4>
-                            <div class="card mb-3">
-                                <div class="card-body">
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Username</h6>
+                            <div className="card mb-3">
+                                <div className="card-body">
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Username</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" id="username" defaultValue={this.state.username} aria-describedby="basic-addon1" />
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">First Name</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" id="first_name" defaultValue={this.state.first_name} aria-describedby="basic-addon1" />
+                                        <div className="col-sm-9 text-secondary">
+                                            <input type="text" className="form-control" id="username" defaultValue={this.state.username} aria-describedby="basic-addon1" />
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Last Name</h6>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">First Name</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" id="last_name" defaultValue={this.state.last_name} aria-describedby="basic-addon1" />
-                                        </div>
-                                    </div>
-                                    <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Email</h6>
-                                        </div>
-                                        <div class="col-sm-9 text-secondary">
-                                            <input type="text" class="form-control" id="email" defaultValue={this.state.email} aria-describedby="basic-addon1" />
+                                        <div className="col-sm-9 text-secondary">
+                                            <input type="text" className="form-control" id="first_name" defaultValue={this.state.first_name} aria-describedby="basic-addon1" />
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-3">
-                                            <h6 class="mb-0">Profile Image</h6>
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Last Name</h6>
                                         </div>
-                                        <div class="col-sm-9 text-secondary">
+                                        <div className="col-sm-9 text-secondary">
+                                            <input type="text" className="form-control" id="last_name" defaultValue={this.state.last_name} aria-describedby="basic-addon1" />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Email</h6>
+                                        </div>
+                                        <div className="col-sm-9 text-secondary">
+                                            <input type="text" className="form-control" id="email" defaultValue={this.state.email} aria-describedby="basic-addon1" />
+                                        </div>
+                                    </div>
+                                    <hr />
+                                    <div className="row">
+                                        <div className="col-sm-3">
+                                            <h6 className="mb-0">Profile Image</h6>
+                                        </div>
+                                        <div className="col-sm-9 text-secondary">
                                             <input type="file" accept="image/*" id="img" />
                                         </div>
                                     </div>
                                     <hr />
-                                    <div class="row">
-                                        <div class="col-sm-13">
-                                            <button type="button" class="btn btn-success me-md-2" onClick={this.updateProfile}>Save</button>
-                                            <button type="button" class="btn btn-secondary me-md-5" onClick={this.editOFF}>Exit</button>
-                                            <button type="button" class="btn btn-danger" onClick={this.deleteImage}>Delete profile image</button>
-
+                                    <div className="row">
+                                        <div className="col-sm-13">
+                                            <button type="button" className="btn btn-success me-md-2" onClick={this.updateProfile}>Save</button>
+                                            <button type="button" className="btn btn-secondary me-md-5" onClick={this.editOFF}>Exit</button>
+                                            <button type="button" className="btn btn-danger" onClick={this.deleteImage}>Delete profile image</button>
                                         </div>
-
                                     </div>
                                 </div>
                             </div>
