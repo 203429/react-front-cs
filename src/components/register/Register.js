@@ -29,42 +29,6 @@ function Register() {
                 window.location.replace("http://localhost:3000/login");
             })
             .catch((error) => {
-                if (error.response.data.username != null) {
-                    if (error.response.data.username[0] == "Ya existe un usuario con ese nombre.") {
-                        alert("Username: Ya existe un usuario con ese nombre.");
-                    }
-                    if (error.response.data.username[0] == "Este campo no puede estar en blanco.") {
-                        alert("Username: Este campo no puede estar en blanco.");
-                    }
-                }
-                if(error.response.data.email != null){
-                    if(error.response.data.email[0] == "Introduzca una dirección de correo electrónico válida."){
-                        alert("Email: Introduzca una dirección de correo electrónico válida.");
-                    }
-                    if(error.response.data.email[0] == "Este campo no puede estar en blanco."){
-                        alert("Email: Este campo no puede estar en blanco.")
-                    }
-                    if(error.response.data.email[0] == "Este campo debe ser único."){
-                        alert("Email: Este campo debe ser único.")
-                    }
-                }
-                if (error.response.data.password != null) {
-                    if (error.response.data.password[0] == "Password fields didn't match.") {
-                        alert("Contraseña: Las contraseñas no coinciden");
-                    }
-                    if (error.response.data.password[0] == "La contraseña es muy corta. Debe contener al menos 8 caracteres.") {
-                        alert("Contraseña: La contraseña es muy corta. Debe contener al menos 8 caracteres.");
-                    }
-                    if (error.response.data.password[0] == "Esta contraseña es muy común.") {
-                        alert("Contraseña: Esta contraseña es muy común.");
-                    }
-                    if (error.response.data.password[0] == "Este campo no puede estar en blanco.") {
-                        alert("Contraseña: Este campo no puede estar en blanco.");
-                    }
-                    if (error.response.data.password2[0] == "Este campo no puede estar en blanco.") {
-                        alert("Contraseña: Este campo no puede estar en blanco.");
-                    }
-                }
                 alert(error.response.data);
             });
     };

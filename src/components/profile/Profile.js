@@ -1,6 +1,5 @@
 import axios from 'axios';
 import { Component } from 'react';
-import { NavLink } from "react-router-dom";
 import './Profile.css';
 
 class Profile extends Component {
@@ -19,6 +18,7 @@ class Profile extends Component {
     }
 
     componentDidMount() {
+        var img=""
         axios
             .get("http://localhost:8000/api/v1/profile/" + localStorage.getItem('user_id'), {
                 headers: {
@@ -33,7 +33,7 @@ class Profile extends Component {
                 if (res.data.url_img == null) {
                     document.getElementById('loadimage').src = "http://localhost:8000/assets/img-userProfile/default-profile-img.jpg";
                 } else {
-                    var img = "http://localhost:8000" + res.data.url_img;
+                    img = "http://localhost:8000" + res.data.url_img;
                     document.getElementById('loadimage').src = img;
                 }
                 this.setState({
